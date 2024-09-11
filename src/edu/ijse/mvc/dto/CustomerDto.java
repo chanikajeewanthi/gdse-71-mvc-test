@@ -18,13 +18,13 @@ public class CustomerDto {
     private double salary;
     private String city;
     private String province;
-    private int postalCode;
+    private String postalCode;
 
     public CustomerDto() {
 
     }
 
-    public CustomerDto(String id, String title, String name, String dob, String address, double salary, String city, String province, int postalCode) {
+    public CustomerDto(String id, String title, String name, String dob, String address, double salary, String city, String province, String postalCode) {
         this.id = id;
         this.title = title;
         this.name = name;
@@ -152,15 +152,22 @@ public class CustomerDto {
     /**
      * @return the postalCode
      */
-    public int getPostalCode() {
+    public String getPostalCode() {
         return postalCode;
     }
 
     /**
      * @param postalCode the postalCode to set
      */
-    public void setPostalCode(int postalCode) {
+    public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
     }
+
+    @Override
+    public String toString() {
+        return "CustomerDto{" + "id=" + id + ", title=" + title + ", name=" + name + ", dob=" + dob + ", address=" + address + ", salary=" + salary + ", city=" + city + ", province=" + province + ", postalCode=" + postalCode + '}';
+    }
+
+    
 
 }
